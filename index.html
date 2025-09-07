@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логин / Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Кнопки -->
+<button id="loginBtn" class="top-left-btn">Войти</button>
+<button id="changeBgBtn" class="top-right-btn">Сменить фон</button>
+
+<div class="container">
+    <!-- Регистрация -->
+    <div id="registerSection" class="card active">
+        <h2>Регистрация</h2>
+        <form id="regForm" autocomplete="on">
+            <div class="field">
+                <input type="text" name="username" placeholder="Имя" autocomplete="name" required>
+                <span></span>
+            </div>
+            <div class="field">
+                <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+                <span></span>
+            </div>
+            <div class="field">
+                <input type="password" name="password" placeholder="Пароль (латиница)" autocomplete="current-password" required>
+                <span></span>
+            </div>
+            <button type="submit">Зарегистрироваться</button>
+            <p id="regMessage"></p>
+        </form>
+    </div>
+
+    <!-- Логин -->
+    <div id="loginSection" class="card">
+        <h2>Вход</h2>
+        <form id="loginForm" autocomplete="on">
+            <div class="field">
+                <input type="email" name="loginEmail" placeholder="Email" autocomplete="email" required>
+                <span></span>
+            </div>
+            <div class="field">
+                <input type="password" name="loginPassword" placeholder="Пароль" autocomplete="current-password" required>
+                <span></span>
+            </div>
+            <button type="submit">Войти</button>
+            <p id="loginMessage"></p>
+        </form>
+        <button id="backBtn" class="back-btn">Назад</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
