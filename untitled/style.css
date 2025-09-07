@@ -1,0 +1,111 @@
+* { box-sizing: border-box; margin:0; padding:0; font-family: 'Segoe UI', sans-serif; }
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #8e44ad; /* фиолетовый по умолчанию */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+/* Кнопки */
+.top-left-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #2980b9;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+.top-left-btn:hover { background: #1c5980; }
+
+.top-right-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #27ae60;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+.top-right-btn:hover { background: #1f8a4c; }
+
+/* Контейнер */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Карточки */
+.card {
+    display: none;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 25px;
+    width: 100%;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    text-align: center;
+    color: #ecf0f1;
+    transition: all 0.5s ease;
+}
+
+.card.active { display: block; }
+
+/* Заголовки */
+.card h2 { margin-bottom: 25px; font-weight: 400; }
+
+/* Поля ввода */
+.field { position: relative; margin-bottom: 20px; }
+.field input {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 2px solid #7f8c8d;
+    background: transparent;
+    color: #ecf0f1;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.field input:focus { border-bottom-color: #3498db; }
+.field span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #3498db;
+    transition: 0.3s;
+}
+.field input:focus ~ span { width: 100%; }
+
+/* Кнопки формы */
+button[type="submit"], .back-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #3498db;
+    color: #ecf0f1;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+button[type="submit"]:hover, .back-btn:hover { background: #2980b9; transform: scale(1.05); }
+
+/* Сообщения */
+#loginMessage, #regMessage { margin-top: 15px; font-size: 14px; color: #2ecc71; }
